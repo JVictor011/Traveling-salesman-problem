@@ -1,4 +1,4 @@
-from algoritmos import calcular_distancia_total, obter_vizinhos
+from src.utils import calcular_distancia_total, obter_vizinhos
 
 def hill_climb(matriz, solucao_inicial):
     melhor_solucao = solucao_inicial

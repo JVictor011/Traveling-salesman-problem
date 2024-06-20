@@ -25,9 +25,7 @@ def obter_vizinhos(solucao):
             vizinhos.append(vizinho)
     return vizinhos
 
-
 def escrever_resultado(arquivo, itinerario, distancia):
-
     with open(arquivo, 'w') as f:
         f.write("Melhor Itinerário Encontrado:\n")
         f.write(str(itinerario) + "\n")
