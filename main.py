@@ -1,13 +1,12 @@
-from src.utils import escrever_resultado, ler_matriz_distancias, obter_vizinhos, gerar_solucao_inicial, calcular_distancia_total
+from src.utils import escrever_resultado, ler_matriz_distancias, gerar_solucao_inicial, calcular_distancia_total
 from src.hill_climb.algoritmos import hill_climb
 from src.algoritmo_genetico.algoritmos import AlgoritmoGenetico
 from src.tempera_simulada.algoritmos import simulated_annealing
 from time import time
-from memory_profiler import memory_usage
 
 def main():
-    caminho_arquivo_distancias = 'src/data/p01_d.txt'
-    caminho_arquivo_resultados = 'src/data/p01_s.txt'
+    caminho_arquivo_distancias = 'src/data/fri26_d.txt'
+    caminho_arquivo_resultados = 'src/data/fri26_s.txt'
 
     matriz_distancias = ler_matriz_distancias(caminho_arquivo_distancias)
 
