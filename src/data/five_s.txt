@@ -1,0 +1,4 @@
+Melhor Itinerário Encontrado:
+[4, 3, 0, 2, 1]
+Comprimento do Melhor Tour:
+19.0
