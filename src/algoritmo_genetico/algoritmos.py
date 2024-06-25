@@ -1,7 +1,7 @@
 import random
 from src.utils import calcular_distancia_total, gerar_solucao_inicial
 
-def selecao(populacao, funcao_objetivo, k=3):
+def selecao(populacao, funcao_objetivo, k=55):
     selecionados = []
     for _ in range(len(populacao)):
         competidores = random.sample(populacao, k)
@@ -25,7 +25,7 @@ def crossover(pai1, pai2):
             ptr += 1
     return filho
 
-def mutacao(individuo, taxa_mutacao=0.01):
+def mutacao(individuo, taxa_mutacao=0.001):
     for i in range(len(individuo)):
         if random.random() < taxa_mutacao:
             j = random.randint(0, len(individuo) - 1)
@@ -37,7 +37,7 @@ def condicao_parada(geracao_atual, max_geracoes):
 def melhor_individuo(populacao, funcao_objetivo):
     return min(populacao, key=funcao_objetivo)
 
-def AlgoritmoGenetico(matriz_distancias, tamanho_populacao=100, max_geracoes=1000, taxa_mutacao=0.01):
+def AlgoritmoGenetico(matriz_distancias, tamanho_populacao=400, max_geracoes=1000, taxa_mutacao=0.001):
     populacao = [gerar_solucao_inicial(len(matriz_distancias)) for _ in range(tamanho_populacao)]
     geracao = 0
 

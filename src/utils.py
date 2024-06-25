@@ -2,12 +2,11 @@ import random
 
 def calcular_distancia_total(matriz, itinerario):
     distancia_total = 0.0
-    for i in range(len(itinerario) - 1):  # Parar no penúltimo elemento
+    for i in range(len(itinerario) - 1):
         cidade_a = itinerario[i]
         cidade_b = itinerario[i + 1]
         distancia_total += matriz[cidade_a][cidade_b]
     
-    # Adiciona a distância de volta ao ponto inicial
     distancia_total += matriz[itinerario[-1]][itinerario[0]]
     return distancia_total
 
